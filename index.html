@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SlothCoin ($SLOTH) — The Chillest Meme Coin</title>
+    <meta name="description" content="SlothCoin ($SLOTH) — a fun, friendly meme cryptocurrency that naps its way to the moon. Read the lore, check tokenomics, and join the community." />
+    <meta name="keywords" content="SlothCoin, SLOTH, meme coin, crypto, tokenomics, roadmap" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='48' fill='%2308BDBD'/%3E%3Ctext x='50' y='60' font-size='48' text-anchor='middle' fill='white'%3E😴%3C/text%3E%3C/svg%3E" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="SlothCoin ($SLOTH) — The Chillest Meme Coin" />
+    <meta property="og:description" content="A fun, clean, responsive landing page for the $SLOTH meme cryptocurrency. Tokenomics, roadmap, how to buy, and more." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://dummyimage.com/1200x630/08BDBD/ffffff&text=SlothCoin" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"] },
+            colors: {
+              sloth: {
+                green: "#22c55e",
+                teal: "#08BDBD",
+                blue: "#3b82f6",
+                banana: "#F7C948",
+                lilac: "#c084fc",
+                ink: "#0f172a"
+              }
+            },
+            boxShadow: {
+              soft: "0 10px 25px -10px rgba(2,6,23,0.2)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+    </style>
+  </head>
+  <body class="bg-slate-50 text-slate-800 antialiased">
+    <!-- Background decoration -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10">
+      <div class="absolute -top-24 left-1/2 -translate-x-1/2 h-[28rem] w-[28rem] rounded-full bg-sloth-teal/20 blur-3xl"></div>
+      <div class="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-sloth-blue/10 blur-2xl"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 w-full backdrop-blur bg-white/70 border-b border-white/40">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex h-16 items-center justify-between">
+          <a href="#" class="flex items-center gap-3 group">
+            <!-- Mascot Logo Placeholder (SVG) -->
+            <span class="grid h-10 w-10 place-items-center rounded-full bg-sloth-teal text-2xl shadow-soft transition group-hover:scale-105">😴</span>
+            <div class="leading-tight">
+              <div class="text-lg font-extrabold tracking-tight">SlothCoin</div>
+              <div class="text-xs text-slate-500 font-medium">Ticker: $SLOTH</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium">
+            <a href="#about" class="hover:text-sloth-blue">About</a>
+            <a href="#tokenomics" class="hover:text-sloth-blue">Tokenomics</a>
+            <a href="#roadmap" class="hover:text-sloth-blue">Roadmap</a>
+            <a href="#how-to-buy" class="hover:text-sloth-blue">How to Buy</a>
+            <a href="#faq" class="hover:text-sloth-blue">FAQ</a>
+            <a href="#community" class="hover:text-sloth-blue">Community</a>
+          </nav>
+
+          <div class="flex items-center gap-3">
+            <a href="#how-to-buy" class="hidden md:inline-flex items-center rounded-full bg-sloth-green px-4 py-2 text-white shadow-soft hover:opacity-90">Buy $SLOTH</a>
+            <button id="mobileMenuBtn" class="md:hidden inline-flex items-center justify-center rounded-lg p-2 hover:bg-white/60">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden border-t border-white/50 bg-white/90 backdrop-blur">
+        <div class="mx-auto max-w-7xl px-4 py-4">
+          <div class="grid gap-3 text-sm">
+            <a href="#about" class="py-2 hover:text-sloth-blue">About</a>
+            <a href="#tokenomics" class="py-2 hover:text-sloth-blue">Tokenomics</a>
+            <a href="#roadmap" class="py-2 hover:text-sloth-blue">Roadmap</a>
+            <a href="#how-to-buy" class="py-2 hover:text-sloth-blue">How to Buy</a>
+            <a href="#faq" class="py-2 hover:text-sloth-blue">FAQ</a>
+            <a href="#community" class="py-2 hover:text-sloth-blue">Community</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative" id="hero">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-20 sm:pt-20 sm:pb-28">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900">
+              SlothCoin: The Coin That Naps Its Way to the Moon
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 max-w-prose">
+              Meet <span class="font-semibold">$SLOTH</span> — the meme cryptocurrency that believes slow and steady wins the race. Fun community, playful tokenomics, and a lore that's so chill it snores.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-3">
+              <a href="#how-to-buy" class="inline-flex items-center rounded-full bg-sloth-green px-6 py-3 text-white font-semibold shadow-soft hover:opacity-90">Buy $SLOTH</a>
+              <a href="#about" class="inline-flex items-center rounded-full bg-white px-6 py-3 text-slate-900 font-semibold shadow border border-slate-200 hover:bg-slate-50">Read the Lore</a>
+            </div>
+            <div class="mt-6 text-xs text-slate-500">
+              Contract: <span class="font-mono select-all">0xYOURCONTRACTADDRESSHERE0000000000000000</span>
+            </div>
+          </div>
+          <div class="relative">
+            <!-- Mascot Illustration Placeholder -->
+            <div class="relative mx-auto aspect-[4/3] w-full max-w-xl overflow-hidden rounded-3xl bg-gradient-to-br from-sloth-teal/20 via-white to-sloth-blue/20 shadow-soft">
+              <div class="absolute inset-0 grid place-items-center text-7xl">🦥</div>
+              <svg class="absolute inset-x-10 bottom-8" viewBox="0 0 600 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs>
+                  <linearGradient id="grad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#22c55e" />
+                    <stop offset="50%" stop-color="#08BDBD" />
+                    <stop offset="100%" stop-color="#3b82f6" />
+                  </linearGradient>
+                </defs>
+                <path d="M0,60 Q150,0 300,60 T600,60" fill="none" stroke="url(#grad)" stroke-width="10" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <p class="mt-4 text-center text-sm text-slate-500">Drop in your actual mascot image later.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Lore Section -->
+    <section id="about" class="py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-10 lg:grid-cols-12 lg:gap-16">
+          <div class="lg:col-span-5">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">About $SLOTH</h2>
+            <p class="mt-4 text-slate-600">
+              Legend says a sleepy sloth found a hammock between two blockchains and took the longest nap in crypto history. When it woke up, it had dreamed a community so cozy and kind that it decided to mint a coin. Thus, <span class="font-semibold">SlothCoin</span> was born: a celebration of patience, vibes, and good naps.
+            </p>
+            <p class="mt-4 text-slate-600">
+              SlothCoin is a meme-first, community-driven experiment. No promises, no pressure — just playful culture, silly numbers, and a simple mission: take it slow, have fun, and build something wholesome together.
+            </p>
+          </div>
+          <div class="lg:col-span-7">
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h3 class="text-xl font-bold">Fast Facts</h3>
+              <dl class="mt-4 grid gap-4 sm:grid-cols-2">
+                <div class="rounded-xl bg-slate-50 p-4">
+                  <dt class="text-sm text-slate-500">Chain</dt>
+                  <dd class="text-lg font-semibold">Ethereum (ERC-20)</dd>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-4">
+                  <dt class="text-sm text-slate-500">Ticker</dt>
+                  <dd class="text-lg font-semibold">$SLOTH</dd>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-4">
+                  <dt class="text-sm text-slate-500">Contract</dt>
+                  <dd class="text-xs font-mono select-all break-all">0xYOURCONTRACTADDRESSHERE0000000000000000</dd>
+                </div>
+                <div class="rounded-xl bg-slate-50 p-4">
+                  <dt class="text-sm text-slate-500">Decimals</dt>
+                  <dd class="text-lg font-semibold">18</dd>
+                </div>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Tokenomics</h2>
+            <p class="mt-4 text-slate-600">Fun numbers, cozy vibes. A simple allocation with community at the core.</p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-500">Total Supply</div>
+                <div class="text-2xl font-extrabold">420,690,000,000</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-500">Buy/Sell Tax</div>
+                <div class="text-2xl font-extrabold">0%</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-500">Liquidity Burn</div>
+                <div class="text-2xl font-extrabold">69%</div>
+              </div>
+              <div class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                <div class="text-sm text-slate-500">Max Wallet</div>
+                <div class="text-2xl font-extrabold">No Limits</div>
+              </div>
+            </div>
+
+            <ul class="mt-8 grid gap-3">
+              <li class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-sloth-green"></span> <span class="font-medium">Community</span> — 69%</li>
+              <li class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-sloth-teal"></span> <span class="font-medium">Liquidity</span> — 20%</li>
+              <li class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-sloth-blue"></span> <span class="font-medium">Treasury</span> — 7%</li>
+              <li class="flex items-center gap-3"><span class="h-3 w-3 rounded-full bg-sloth-banana"></span> <span class="font-medium">Airdrops</span> — 4%</li>
+            </ul>
+          </div>
+
+          <!-- Donut Chart (SVG) -->
+          <div class="grid place-items-center">
+            <div class="relative">
+              <svg width="280" height="280" viewBox="0 0 120 120" aria-label="Token allocation donut chart">
+                <!-- Base circle -->
+                <circle cx="60" cy="60" r="46" fill="none" stroke="#e2e8f0" stroke-width="18" />
+                <!-- Community 69% -->
+                <circle cx="60" cy="60" r="46" fill="none" stroke="#22c55e" stroke-width="18" stroke-dasharray="289.027 1000" stroke-dashoffset="0" transform="rotate(-90 60 60)" />
+                <!-- Liquidity 20% -->
+                <circle cx="60" cy="60" r="46" fill="none" stroke="#08BDBD" stroke-width="18" stroke-dasharray="83.776 1000" stroke-dashoffset="-289.027" transform="rotate(-90 60 60)" />
+                <!-- Treasury 7% -->
+                <circle cx="60" cy="60" r="46" fill="none" stroke="#3b82f6" stroke-width="18" stroke-dasharray="29.322 1000" stroke-dashoffset="-372.803" transform="rotate(-90 60 60)" />
+                <!-- Airdrops 4% -->
+                <circle cx="60" cy="60" r="46" fill="none" stroke="#F7C948" stroke-width="18" stroke-dasharray="16.755 1000" stroke-dashoffset="-402.125" transform="rotate(-90 60 60)" />
+                <circle cx="60" cy="60" r="32" fill="white" />
+                <text x="60" y="60" text-anchor="middle" dominant-baseline="middle" class="fill-slate-800" font-size="6" font-weight="700">$SLOTH</text>
+              </svg>
+              <div class="absolute inset-0 grid place-items-center pointer-events-none">
+                <div class="text-center">
+                  <div class="text-sm font-semibold text-slate-500">Allocation</div>
+                  <div class="text-2xl font-extrabold">100%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Roadmap</h2>
+        <p class="mt-4 text-slate-600">We keep it playful and clear. Here's the nap schedule.</p>
+
+        <ol class="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <li class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="absolute -top-3 left-6 rounded-full bg-sloth-green px-3 py-1 text-xs font-bold text-white shadow">Phase 1</div>
+            <h3 class="mt-2 text-xl font-bold">First Nap</h3>
+            <p class="mt-2 text-sm text-slate-600">Launch socials, website, and token. Tuck the sloth in.</p>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-600">
+              <li>Community kickoff</li>
+              <li>DEX listing</li>
+              <li>Liquidity pool</li>
+            </ul>
+          </li>
+          <li class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="absolute -top-3 left-6 rounded-full bg-sloth-teal px-3 py-1 text-xs font-bold text-white shadow">Phase 2</div>
+            <h3 class="mt-2 text-xl font-bold">Hammock Time</h3>
+            <p class="mt-2 text-sm text-slate-600">Meme contests, lore drops, and partnerships with comfy brands.</p>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-600">
+              <li>Mascot art bounties</li>
+              <li>Community rewards</li>
+              <li>Marketing push</li>
+            </ul>
+          </li>
+          <li class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="absolute -top-3 left-6 rounded-full bg-sloth-blue px-3 py-1 text-xs font-bold text-white shadow">Phase 3</div>
+            <h3 class="mt-2 text-xl font-bold">Treehouse DAO</h3>
+            <p class="mt-2 text-sm text-slate-600">Community-led treasury proposals. Vote from your hammock.</p>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-600">
+              <li>Snapshot-style voting</li>
+              <li>Community grants</li>
+              <li>Open-source tools</li>
+            </ul>
+          </li>
+          <li class="relative rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <div class="absolute -top-3 left-6 rounded-full bg-sloth-banana px-3 py-1 text-xs font-bold text-slate-900 shadow">Phase 4</div>
+            <h3 class="mt-2 text-xl font-bold">Perpetual Siesta</h3>
+            <p class="mt-2 text-sm text-slate-600">Merch, IRL hangouts, and sloth sanctuaries support.</p>
+            <ul class="mt-4 list-disc pl-5 text-sm text-slate-600">
+              <li>Charity initiatives</li>
+              <li>Mobile mini-game</li>
+              <li>Community roadmap v2</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- How to Buy -->
+    <section id="how-to-buy" class="py-20 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid gap-8 lg:grid-cols-12 lg:items-center">
+          <div class="lg:col-span-5">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">How to Buy</h2>
+            <p class="mt-4 text-slate-600">Three simple steps. No rush — take it slow.</p>
+          </div>
+          <div class="lg:col-span-7">
+            <ol class="grid gap-6 sm:grid-cols-3">
+              <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <div class="text-xs font-bold text-slate-500">STEP 1</div>
+                <h3 class="mt-1 font-bold">Get a wallet</h3>
+                <p class="mt-2 text-sm text-slate-600">Install MetaMask or your favorite wallet. Keep your seed safe.</p>
+              </li>
+              <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <div class="text-xs font-bold text-slate-500">STEP 2</div>
+                <h3 class="mt-1 font-bold">Fund it</h3>
+                <p class="mt-2 text-sm text-slate-600">Buy ETH on a centralized exchange and send it to your wallet.</p>
+              </li>
+              <li class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+                <div class="text-xs font-bold text-slate-500">STEP 3</div>
+                <h3 class="mt-1 font-bold">Swap on a DEX</h3>
+                <p class="mt-2 text-sm text-slate-600">Use Uniswap: paste the contract and swap ETH for $SLOTH.</p>
+              </li>
+            </ol>
+            <div class="mt-6">
+              <a href="#" class="inline-flex items-center gap-2 rounded-full bg-sloth-ink px-5 py-3 text-white shadow-soft hover:opacity-90">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 3a4.5 4.5 0 0 1 4.473 4H22v2h-2.027A4.5 4.5 0 0 1 15.5 13H13v3h4v2h-4v3h-2v-3H7v-2h4v-3H8.5A4.5 4.5 0 0 1 4.027 9H2V7h2.027A4.5 4.5 0 0 1 8.5 3H11V0h2v3h2.5z"/></svg>
+                Launch DEX (configure link)
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20">
+      <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-center">FAQ</h2>
+        <div class="mt-10 grid gap-4">
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">What chain is $SLOTH on?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Ethereum mainnet (ERC-20).</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">Is the contract renounced and liquidity locked?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Place your actual status here. The template assumes 0% tax and fair launch mechanics.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">Are there burns or reflections?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">No reflections. Burns optional. Keep it simple for memes.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">Any taxes?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Template shows 0% buy/sell. Update to your real settings.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">How do I verify the contract?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Add your Etherscan link once verified. Paste address in Uniswap to trade.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">Is this financial advice?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Absolutely not. This is for memes and community fun only.</p>
+          </details>
+          <details class="group rounded-xl border border-slate-200 bg-white p-5">
+            <summary class="flex cursor-pointer list-none items-center justify-between gap-4">
+              <span class="font-semibold">Where can I find the community?</span>
+              <span class="transition group-open:rotate-45">+</span>
+            </summary>
+            <p class="mt-3 text-slate-600">Scroll to the community section for Discord, Telegram, and X.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Community / Footer -->
+    <footer id="community" class="border-t border-slate-200 bg-white">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+        <div class="grid gap-10 md:grid-cols-2">
+          <div>
+            <div class="flex items-center gap-3">
+              <span class="grid h-10 w-10 place-items-center rounded-full bg-sloth-teal text-2xl shadow-soft">🦥</span>
+              <div>
+                <div class="text-lg font-extrabold">SlothCoin</div>
+                <div class="text-xs text-slate-500 font-medium">$SLOTH</div>
+              </div>
+            </div>
+            <p class="mt-4 max-w-md text-slate-600">Not financial advice. Sloths are slow; crypto is volatile. DYOR, nap responsibly.</p>
+            <p class="mt-2 text-xs text-slate-400">© <span id="year"></span> SlothCoin. All naps reserved.</p>
+          </div>
+
+          <div>
+            <h3 class="font-bold">Join the Community</h3>
+            <div class="mt-4 flex flex-wrap gap-3">
+              <a href="#" class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 hover:bg-slate-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.58-2.46.69a4.3 4.3 0 0 0 1.88-2.37 8.59 8.59 0 0 1-2.72 1.04 4.28 4.28 0 0 0-7.29 3.9A12.14 12.14 0 0 1 3.15 4.7a4.28 4.28 0 0 0 1.32 5.72 4.26 4.26 0 0 1-1.94-.54v.06a4.28 4.28 0 0 0 3.44 4.2c-.47.13-.97.2-1.48.2-.36 0-.71-.03-1.05-.1a4.28 4.28 0 0 0 4 2.97A8.58 8.58 0 0 1 2 19.54 12.1 12.1 0 0 0 8.56 21c7.14 0 11.05-5.91 11.05-11.05 0-.17 0-.34-.01-.5A7.9 7.9 0 0 0 22.46 6z"/></svg>
+                X / Twitter
+              </a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 hover:bg-slate-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.26 2 11.67c0 4.2 2.64 7.77 6.3 9.03.46.08.63-.19.63-.43 0-.21-.01-.9-.01-1.64-2.31.49-2.8-.55-2.98-1.06-.1-.25-.54-1.06-.92-1.27-.31-.17-.75-.59-.01-.6.69-.01 1.18.64 1.34.91.79 1.33 2.06.96 2.57.73.08-.57.31-.96.56-1.18-2.05-.23-4.21-1.01-4.21-4.5 0-.99.36-1.8.95-2.43-.09-.23-.41-1.17.09-2.43 0 0 .77-.24 2.52.93a8.5 8.5 0 0 1 4.59 0c1.75-1.17 2.52-.93 2.52-.93.5 1.26.18 2.2.09 2.43.59.63.95 1.44.95 2.43 0 3.5-2.16 4.27-4.22 4.5.32.27.6.8.6 1.62 0 1.17-.01 2.11-.01 2.4 0 .24.17.52.63.43a9.72 9.72 0 0 0 6.3-9.03C22 6.26 17.52 2 12 2z"/></svg>
+                Discord
+              </a>
+              <a href="#" class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 hover:bg-slate-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.26 2 11.67 2 16.1 5.08 19.85 9.22 21v-3.2H7.41v-2.12h1.81v-1.62c0-1.79 1.04-2.78 2.64-2.78.77 0 1.57.14 1.57.14v1.73h-.89c-.88 0-1.16.55-1.16 1.12v1.41h1.98l-.32 2.12h-1.66V21C18.92 19.85 22 16.1 22 11.67 22 6.26 17.52 2 12 2z"/></svg>
+                Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+  </html>
+
